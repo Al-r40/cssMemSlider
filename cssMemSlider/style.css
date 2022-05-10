@@ -1,0 +1,104 @@
+body {
+    background-color: darkslategrey;
+    color: #fff;
+    margin: 0;
+}
+
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 218.75%;
+    text-align: center;
+    font-family: 'Water Brush';
+    margin: 5px auto;
+}
+
+.mem {
+    display: none;
+    width: 95%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.active-mem {
+    display: block;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    margin: 1.56% auto;
+}
+
+.describe {
+    display: none;
+    font-family: Syne Tactile;
+    font-size: 125%;
+}
+
+.active-describe {
+    display: block;
+}
+
+.btn-controls {
+    display: flex;
+    flex-direction: row;
+}
+
+.control {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control:hover .btn{
+    border: 2px solid #fff;
+}
+
+.control:active .btn {
+    background-color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn {
+    width: 10px;
+    height: 15px;
+    margin: 0;
+    border-radius: 50%;
+    border: 2px solid aquamarine;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    border: 2px solid #fff;
+}
+
+.btn:active {
+    background-color: #fff;
+    border: 2px solid #fff;
+}
+
+.active {
+    background-color: #fff;
+    border: 2px solid #fff;
+}
+
+@media (max-width: 440px) {
+    .block {
+        flex-direction: column-reverse;
+    }
+
+    .describe {
+        margin-top: 1.56%;
+    }
+}
