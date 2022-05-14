@@ -38,6 +38,7 @@ h1 {
 }
 
 .describe {
+    display: none;
     font-family: Syne Tactile;
     font-size: 125%;
 }
@@ -58,14 +59,14 @@ h1 {
 
 .control:hover .btn{
     border: 2px solid #fff;
+    background-color: #fff;
 }
-
 .control:active .btn {
     background-color: #fff;
     border: 2px solid #fff;
 }
 
-input[name="r"] {
+input {
     display: none;
 }
 
@@ -74,8 +75,8 @@ input[name="r"] {
     height: 10px;
     margin: 0;
     border-radius: 50%;
-    border: 2px solid aquamarine;
-    background-color: transparent;
+    border: 2px solid #7fffd4;
+    background-color: #7fffd4;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -91,47 +92,33 @@ input[name="r"] {
     transform: scale(1.1);
 }
 
-.active {
-    background-color: #fff;
-    border: 2px solid #fff;
-}
-
-#r1:checked ~ .s1 {
+#r1:checked ~ .img > .s1 {
     margin-left: 0;
 }
-
-#r2:checked ~ .s1 {
+#r2:checked ~ .img > .s1 {
     margin-left: -100%;
 }
-
-#r3:checked ~ .s1 {
+#r3:checked ~ .img > .s1 {
     margin-left: -200%;
 }
-
-#r4:checked ~ .s1 {
+#r4:checked ~ .img > .s1 {
     margin-left: -300%;
 }
 
-/* контролы */
-
-#r1:checked ~ .f1 {
-    background-color: #fff;
-    border: 2px solid #fff;
+#r1:checked ~ .block > .btn-controls > .control > .c1,
+#r2:checked ~ .block > .btn-controls > .control > .c2,
+#r3:checked ~ .block > .btn-controls > .control > .c3,
+#r4:checked ~ .block > .btn-controls > .control > .c4 {
+    background-color: transparent;
 }
 
-#r2:checked ~ .f2 {
-    background-color: #fff;
-    border: 2px solid #fff;
-}
-
-#r3:checked ~ .f3 {
-    background-color: #fff;
-    border: 2px solid #fff;
-}
-
-#r4:checked ~ .f4 {
-    background-color: #fff;
-    border: 2px solid #fff;
+#r1:checked ~ .block > .describes > .d1,
+#r2:checked ~ .block > .describes > .d2,
+#r3:checked ~ .block > .describes > .d3,
+#r4:checked ~ .block > .describes > .d4 {
+    display: block;
+	transition: 0.5s;
+	transform: translateX(0);
 }
 
 @media (max-width: 440px) {
